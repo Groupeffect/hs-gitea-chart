@@ -504,6 +504,7 @@ primary:
     fsGroupChangePolicy: Always
     sysctls: []
     supplementalGroups: []
+    # fsGroup: root
     fsGroup: 1001
   ## Container Security Context
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
@@ -521,12 +522,12 @@ primary:
   containerSecurityContext:
     enabled: true
     seLinuxOptions: {}
-    # runAsUser: 1001
-    # runAsGroup: 1001
+    runAsUser: 1001
+    runAsGroup: 1001
     # runAsNonRoot: true
     # privileged: false
-    runAsUser: root
-    runAsGroup: root
+    # runAsUser: root
+    # runAsGroup: root
     runAsNonRoot: false
     privileged: true
     readOnlyRootFilesystem: true
