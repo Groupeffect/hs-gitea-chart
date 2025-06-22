@@ -308,6 +308,7 @@ extraVolumeMounts: []
 ## @section Init
 ## @param initPreScript Bash shell script copied verbatim to the start of the init-container.
 # initPreScript: "mkdir -p /bitnami/postgresql/data && chown -R git:git /bitnami"
+initPreScript: ""
 ## @param initContainersScriptsVolumeMountPath Path to mount the scripts consumed from the Secrets
 initContainersScriptsVolumeMountPath: "/usr/sbinx"
 #
