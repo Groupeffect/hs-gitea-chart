@@ -521,10 +521,14 @@ primary:
   containerSecurityContext:
     enabled: true
     seLinuxOptions: {}
-    runAsUser: 1001
-    runAsGroup: 1001
-    runAsNonRoot: true
-    privileged: false
+    # runAsUser: 1001
+    # runAsGroup: 1001
+    # runAsNonRoot: true
+    # privileged: false
+    runAsUser: root
+    runAsGroup: root
+    runAsNonRoot: false
+    privileged: true
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
     capabilities:
