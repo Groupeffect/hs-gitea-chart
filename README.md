@@ -1,4 +1,4 @@
-# Gitea Helm Chart <!-- omit from toc -->
+# Reconfigured from : Gitea Helm Chart <!-- omit from toc -->
 
 - [Introduction](#introduction)
 - [Update and versioning policy](#update-and-versioning-policy)
