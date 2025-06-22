@@ -418,8 +418,8 @@ gitea:
   ## @param gitea.config.server.SSH_LISTEN_PORT SSH port for rootless Gitea image
   config:
     APP_NAME: "Gitea: Groupeffect"
-    # database:
-    #   HOST: ge-postgres.dev.svc.cluster.local
+    database:
+      HOST: ge-postgres.dev.svc.cluster.local
     #  RUN_MODE: dev
     server:
       SSH_PORT: 22 # rootful image
@@ -540,11 +540,11 @@ valkey-cluster:
 ## Valkey and [Valkey cluster](#valkey-cluster) cannot be enabled at the same time.
 ## @descriptionEnd
 valkey:
-  enabled: false
+  enabled: true
   architecture: standalone
   global:
     valkey:
-      password: changeme
+      password: admin1234
   master:
     count: 1
     service:
