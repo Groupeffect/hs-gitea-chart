@@ -10,8 +10,8 @@ spec:
     server: "https://kubernetes.default.svc"
   source:
     path: software/cluster/gitea/helmchart
-    repoURL: "https://github.com/Groupeffect/monotremata.git"
-    targetRevision: dev/local
+    repoURL: "https://github.com/Groupeffect/hs-gitea-chart.git"
+    targetRevision: main
     helm:
       valueFiles:
         - values.yaml
