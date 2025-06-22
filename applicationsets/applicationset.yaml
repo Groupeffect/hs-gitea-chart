@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ge-postgres
+  name: gitea
   namespace: argocd
 spec:
   destination:
     name: ""
-    namespace: dev
+    namespace: gitea
     server: "https://kubernetes.default.svc"
   source:
-    path: .
-    repoURL: "http://gitea-http.gitea.svc.cluster.local:3000/groupeffect/hs-postgres-chart.git"
-    targetRevision: main
+    path: software/cluster/gitea/helmchart
+    repoURL: "https://github.com/Groupeffect/monotremata.git"
+    targetRevision: dev/local
     helm:
       valueFiles:
         - values.yaml
@@ -23,9 +23,3 @@ spec:
       selfHeal: false
     syncOptions:
       - Replace=true
-    retry:
-      limit: 2
-      backoff:
-        duration: 5s
-        maxDuration: 1m0s
-        factor: 2
