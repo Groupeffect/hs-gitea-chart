@@ -438,7 +438,13 @@ gitea:
   #       name: gitea-app-ini-plaintext
 
   ## @param gitea.additionalConfigFromEnvs Additional configuration sources from environment variables
-  additionalConfigFromEnvs: []
+  additionalConfigFromEnvs:
+    - name: GITEA__DATABASE__NAME
+      value: gitea
+    - name: GITEA__DATABASE__HOST
+      value: ge-postgres.dev.svc.cluster.local
+    - name: GITEA__DATABASE__PASSWD
+      value: admin1234
 
   ## @param gitea.podAnnotations Annotations for the Gitea pod
   podAnnotations: {}
@@ -593,7 +599,7 @@ postgresql-ha:
 ## @param postgresql.global.postgresql.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
 ## @param postgresql.primary.persistence.size PVC Storage Request for PostgreSQL volume
 postgresql:
-  enabled: true
+  enabled: false
   global:
     postgresql:
       auth:

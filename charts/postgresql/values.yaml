@@ -529,7 +529,7 @@ primary:
     # runAsUser: root
     # runAsGroup: root
     runAsNonRoot: false
-    privileged: true
+    privileged: false
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: true
     capabilities:
