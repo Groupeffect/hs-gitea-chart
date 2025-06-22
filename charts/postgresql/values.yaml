@@ -15,7 +15,7 @@ global:
   ##
   imagePullSecrets: []
   ## @param global.defaultStorageClass Global default StorageClass for Persistent Volume(s)
-## @param global.storageClass DEPRECATED: use global.defaultStorageClass instead
+  ## @param global.storageClass DEPRECATED: use global.defaultStorageClass instead
   ##
   defaultStorageClass: ""
   storageClass: ""
@@ -36,7 +36,7 @@ global:
     ## @param global.postgresql.auth.secretKeys.replicationPasswordKey Name of key in existing secret to use for PostgreSQL credentials (overrides `auth.secretKeys.replicationPasswordKey`). Only used when `global.postgresql.auth.existingSecret` is set.
     ##
     fullnameOverride: ""
-    
+
     auth:
       postgresPassword: ""
       username: ""
@@ -259,7 +259,7 @@ ldap:
   uri: ""
 ## @param postgresqlDataDir PostgreSQL data dir folder
 ##
-postgresqlDataDir: /bitnami/postgresql/data
+postgresqlDataDir: /var/lib/postgresql/data
 ## @param postgresqlSharedPreloadLibraries Shared preload libraries (comma-separated list)
 ##
 postgresqlSharedPreloadLibraries: "pgaudit"
