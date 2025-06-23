@@ -609,7 +609,7 @@ postgresql:
   global:
     postgresql:
       auth:
-        password: admin1234
+        password: gitea
         database: gitea
         username: gitea
       service:
