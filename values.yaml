@@ -423,9 +423,10 @@ gitea:
     databse:
       HOST: ge-postgres.dev.svc.cluster.local
       USER: postgres
-      NAME: "gitea"
+      NAME: gitea
       PASSWD: admin1234
       PORT: 5432
+      DB_TYPE: postgres
     #  RUN_MODE: dev
     # database:
     server:
