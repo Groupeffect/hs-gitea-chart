@@ -530,7 +530,7 @@ primary:
     runAsNonRoot: false
     privileged: true
     readOnlyRootFilesystem: false
-    allowPrivilegeEscalation: false
+    allowPrivilegeEscalation: true
     capabilities:
       drop: ["ALL"]
     seccompProfile:
@@ -987,7 +987,7 @@ readReplicas:
     runAsNonRoot: false
     privileged: true
     readOnlyRootFilesystem: true
-    allowPrivilegeEscalation: false
+    allowPrivilegeEscalation: true
     capabilities:
       drop: ["ALL"]
     seccompProfile:
@@ -1357,7 +1357,7 @@ backup:
       runAsNonRoot: false
       privileged: true
       readOnlyRootFilesystem: true
-      allowPrivilegeEscalation: false
+      allowPrivilegeEscalation: true
       capabilities:
         drop: ["ALL"]
       seccompProfile:
@@ -1497,7 +1497,7 @@ passwordUpdateJob:
     runAsNonRoot: false
     privileged: true
     readOnlyRootFilesystem: true
-    allowPrivilegeEscalation: false
+    allowPrivilegeEscalation: true
     capabilities:
       drop: ["ALL"]
     seccompProfile:
@@ -1772,7 +1772,7 @@ metrics:
     runAsNonRoot: false
     privileged: true
     readOnlyRootFilesystem: true
-    allowPrivilegeEscalation: false
+    allowPrivilegeEscalation: true
     capabilities:
       drop: ["ALL"]
     seccompProfile:
