@@ -377,11 +377,11 @@ primary:
     ## @param primary.preInitDb.scripts Dictionary of pre-init scripts
     ## Specify dictionary of shell scripts to be run before db boot
     ## e.g:
-    ## scripts:
-    ##   my_pre_init_script.sh: |
-    ##      #!/bin/sh
-    ##      echo "Do something."
-    scripts: {}
+    scripts:
+      pre_init_script.sh: |
+        #!/bin/sh
+        mkdir -p /bitnami/postgresql/data && chmod -R 777 /bitnami/postgresql/data
+    # scripts: {}
     ## @param primary.preInitDb.scriptsConfigMap ConfigMap with pre-init scripts to be run
     ## NOTE: This will override `primary.preInitDb.scripts`
     scriptsConfigMap: ""
