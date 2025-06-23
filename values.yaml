@@ -420,9 +420,13 @@ gitea:
   ## @param gitea.config.server.SSH_LISTEN_PORT SSH port for rootless Gitea image
   config:
     APP_NAME: "Gitea: Groupeffect"
-    # database:
-    #   HOST: ge-postgres.dev.svc.cluster.local
+    databse:
+      HOST: "ge-postgres.dev.svc.cluster.local"
+      USER: "postgres"
+      NAME: "gitea"
+      PASSWD: "admin1234"
     #  RUN_MODE: dev
+    # database:
     server:
       SSH_PORT: 22 # rootful image
       SSH_LISTEN_PORT: 2222 # rootless image
@@ -599,7 +603,7 @@ postgresql-ha:
 ## @param postgresql.global.postgresql.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
 ## @param postgresql.primary.persistence.size PVC Storage Request for PostgreSQL volume
 postgresql:
-  enabled: true
+  enabled: false
   global:
     postgresql:
       auth:
