@@ -525,10 +525,10 @@ primary:
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
-    # runAsNonRoot: true
-    # privileged: false
-    runAsNonRoot: true
-    privileged: false
+    # runAsNonRoot: false
+    # privileged: true
+    runAsNonRoot: false
+    privileged: true
     readOnlyRootFilesystem: false
     allowPrivilegeEscalation: false
     capabilities:
@@ -984,8 +984,8 @@ readReplicas:
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
-    runAsNonRoot: true
-    privileged: false
+    runAsNonRoot: false
+    privileged: true
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
     capabilities:
@@ -1354,8 +1354,8 @@ backup:
       seLinuxOptions: {}
       runAsUser: 0 # root
       runAsGroup: 0 # root
-      runAsNonRoot: true
-      privileged: false
+      runAsNonRoot: false
+      privileged: true
       readOnlyRootFilesystem: true
       allowPrivilegeEscalation: false
       capabilities:
@@ -1494,8 +1494,8 @@ passwordUpdateJob:
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
-    runAsNonRoot: true
-    privileged: false
+    runAsNonRoot: false
+    privileged: true
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
     capabilities:
@@ -1644,7 +1644,7 @@ volumePermissions:
     seLinuxOptions: {}
     runAsUser: 0
     runAsGroup: 0
-    runAsNonRoot: true
+    runAsNonRoot: false
     seccompProfile:
       type: RuntimeDefault
 ## @section Other Parameters
@@ -1769,8 +1769,8 @@ metrics:
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
-    runAsNonRoot: true
-    privileged: false
+    runAsNonRoot: false
+    privileged: true
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
     capabilities:
