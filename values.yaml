@@ -273,7 +273,7 @@ persistence:
   labels: {}
   storageClass:
   subPath:
-  volumeName: "gitea-shared-volume"
+  volumeName: ""
   annotations:
     # helm.sh/resource-policy: keep
 
