@@ -526,10 +526,10 @@ primary:
     runAsGroup: 1000
     # runAsNonRoot: true
     # privileged: false
-    runAsNonRoot: false
-    privileged: true
+    runAsNonRoot: true
+    privileged: false
     readOnlyRootFilesystem: false
-    allowPrivilegeEscalation: true
+    allowPrivilegeEscalation: false
     capabilities:
       drop: ["ALL"]
     seccompProfile:
@@ -981,11 +981,11 @@ readReplicas:
   containerSecurityContext:
     enabled: true
     seLinuxOptions: {}
-    runAsUser: 1001
-    runAsGroup: 1001
-    runAsNonRoot: true
+    runAsUser: 1000
+    runAsGroup: 1000
+    runAsNonRoot: false
     privileged: false
-    readOnlyRootFilesystem: true
+    readOnlyRootFilesystem: false
     allowPrivilegeEscalation: false
     capabilities:
       drop: ["ALL"]
