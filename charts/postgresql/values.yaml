@@ -500,7 +500,7 @@ primary:
   ## @param primary.podSecurityContext.fsGroup Group ID for the pod
   ##
   podSecurityContext:
-    enabled: true
+    enabled: false
     fsGroupChangePolicy: Always
     sysctls: []
     supplementalGroups: []
@@ -520,13 +520,13 @@ primary:
   ## @param primary.containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
   ##
   containerSecurityContext:
-    enabled: true
+    enabled: false
     seLinuxOptions: {}
-    runAsUser: 1000
-    runAsGroup: 1000
+    runAsUser: 1001
+    runAsGroup: 1001
     # runAsNonRoot: true
     # privileged: false
-    runAsNonRoot: true
+    runAsNonRoot: false
     privileged: false
     readOnlyRootFilesystem: false
     allowPrivilegeEscalation: false
@@ -960,7 +960,7 @@ readReplicas:
   ## @param readReplicas.podSecurityContext.fsGroup Group ID for the pod
   ##
   podSecurityContext:
-    enabled: true
+    enabled: false
     fsGroupChangePolicy: Always
     sysctls: []
     supplementalGroups: []
@@ -979,13 +979,13 @@ readReplicas:
   ## @param readReplicas.containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
   ##
   containerSecurityContext:
-    enabled: true
+    enabled: false
     seLinuxOptions: {}
-    runAsUser: 1000
-    runAsGroup: 1000
-    runAsNonRoot: false
+    runAsUser: 1001
+    runAsGroup: 1001
+    runAsNonRoot: true
     privileged: false
-    readOnlyRootFilesystem: false
+    readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
     capabilities:
       drop: ["ALL"]
@@ -1349,7 +1349,7 @@ backup:
     ## @param backup.cronjob.containerSecurityContext.capabilities.drop List of capabilities to be dropped
     ## @param backup.cronjob.containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
     containerSecurityContext:
-      enabled: true
+      enabled: false
       seLinuxOptions: {}
       runAsUser: 1001
       runAsGroup: 1001
