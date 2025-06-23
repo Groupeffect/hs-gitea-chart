@@ -526,7 +526,7 @@ primary:
     # runAsGroup: 1001
     # runAsNonRoot: true
     # privileged: false
-    runAsNonRoot: true
+    runAsNonRoot: false
     privileged: false
     runAsUser: root
     runAsGroup: root
