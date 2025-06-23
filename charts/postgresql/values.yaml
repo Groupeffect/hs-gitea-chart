@@ -378,9 +378,10 @@ primary:
     ## Specify dictionary of shell scripts to be run before db boot
     ## e.g:
     scripts:
-      pre_init_script.sh: |
-        #!/bin/sh
-        mkdir -p /bitnami/postgresql/data && chmod -R 777 /bitnami/postgresql/data
+      {}
+      # pre_init_script.sh: |
+      #   #!/bin/sh
+      #   mkdir -p /bitnami/postgresql/data && chmod -R 777 /bitnami/postgresql/data
     # scripts: {}
     ## @param primary.preInitDb.scriptsConfigMap ConfigMap with pre-init scripts to be run
     ## NOTE: This will override `primary.preInitDb.scripts`
@@ -500,12 +501,12 @@ primary:
   ## @param primary.podSecurityContext.fsGroup Group ID for the pod
   ##
   podSecurityContext:
-    enabled: false
+    enabled: true
     fsGroupChangePolicy: Always
     sysctls: []
     supplementalGroups: []
     # fsGroup: root
-    fsGroup: 1001
+    fsGroup: 0 # root
   ## Container Security Context
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
   ## @param primary.containerSecurityContext.enabled Enabled containers' Security Context
@@ -522,11 +523,11 @@ primary:
   containerSecurityContext:
     enabled: false
     seLinuxOptions: {}
-    runAsUser: 1001
-    runAsGroup: 1001
-    # runAsNonRoot: true
+    runAsUser: 0 # root
+    runAsGroup: 0 # root
+    # runAsNonRoot: false
     # privileged: false
-    runAsNonRoot: true
+    runAsNonRoot: false
     privileged: false
     readOnlyRootFilesystem: false
     allowPrivilegeEscalation: false
@@ -964,7 +965,7 @@ readReplicas:
     fsGroupChangePolicy: Always
     sysctls: []
     supplementalGroups: []
-    fsGroup: 1001
+    fsGroup: 0 # root
   ## Container Security Context
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
   ## @param readReplicas.containerSecurityContext.enabled Enabled containers' Security Context
@@ -981,9 +982,9 @@ readReplicas:
   containerSecurityContext:
     enabled: false
     seLinuxOptions: {}
-    runAsUser: 1001
-    runAsGroup: 1001
-    runAsNonRoot: true
+    runAsUser: 0 # root
+    runAsGroup: 0 # root
+    runAsNonRoot: false
     privileged: false
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
@@ -1335,7 +1336,7 @@ backup:
       fsGroupChangePolicy: Always
       sysctls: []
       supplementalGroups: []
-      fsGroup: 1001
+      fsGroup: 0 # root
     ## backup container's Security Context
     ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
     ## @param backup.cronjob.containerSecurityContext.enabled Enabled containers' Security Context
@@ -1351,9 +1352,9 @@ backup:
     containerSecurityContext:
       enabled: false
       seLinuxOptions: {}
-      runAsUser: 1001
-      runAsGroup: 1001
-      runAsNonRoot: true
+      runAsUser: 0 # root
+      runAsGroup: 0 # root
+      runAsNonRoot: false
       privileged: false
       readOnlyRootFilesystem: true
       allowPrivilegeEscalation: false
@@ -1491,9 +1492,9 @@ passwordUpdateJob:
   containerSecurityContext:
     enabled: true
     seLinuxOptions: {}
-    runAsUser: 1001
-    runAsGroup: 1001
-    runAsNonRoot: true
+    runAsUser: 0 # root
+    runAsGroup: 0 # root
+    runAsNonRoot: false
     privileged: false
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
@@ -1514,7 +1515,7 @@ passwordUpdateJob:
     fsGroupChangePolicy: Always
     sysctls: []
     supplementalGroups: []
-    fsGroup: 1001
+    fsGroup: 0 # root
   ## @param passwordUpdateJob.extraEnvVars Array containing extra env vars to configure the credential init job
   ## For example:
   ## extraEnvVars:
@@ -1643,7 +1644,7 @@ volumePermissions:
     seLinuxOptions: {}
     runAsUser: 0
     runAsGroup: 0
-    runAsNonRoot: true
+    runAsNonRoot: false
     seccompProfile:
       type: RuntimeDefault
 ## @section Other Parameters
@@ -1766,9 +1767,9 @@ metrics:
   containerSecurityContext:
     enabled: true
     seLinuxOptions: {}
-    runAsUser: 1001
-    runAsGroup: 1001
-    runAsNonRoot: true
+    runAsUser: 0 # root
+    runAsGroup: 0 # root
+    runAsNonRoot: false
     privileged: false
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
