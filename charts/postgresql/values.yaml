@@ -521,7 +521,7 @@ primary:
   ## @param primary.containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
   ##
   containerSecurityContext:
-    enabled: false
+    enabled: true
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
@@ -980,7 +980,7 @@ readReplicas:
   ## @param readReplicas.containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
   ##
   containerSecurityContext:
-    enabled: false
+    enabled: true
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
@@ -1350,7 +1350,7 @@ backup:
     ## @param backup.cronjob.containerSecurityContext.capabilities.drop List of capabilities to be dropped
     ## @param backup.cronjob.containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
     containerSecurityContext:
-      enabled: false
+      enabled: true
       seLinuxOptions: {}
       runAsUser: 0 # root
       runAsGroup: 0 # root
@@ -1644,7 +1644,7 @@ volumePermissions:
     seLinuxOptions: {}
     runAsUser: 0
     runAsGroup: 0
-    runAsNonRoot: false
+    runAsNonRoot: true
     seccompProfile:
       type: RuntimeDefault
 ## @section Other Parameters
