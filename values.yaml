@@ -422,12 +422,12 @@ gitea:
     #  RUN_MODE: dev
     APP_NAME: "Gitea: Groupeffect"
     databse:
-    HOST: ge-postgres.dev.svc.cluster.local
-    USER: postgres
-    NAME: gitea
-    PASSWD: admin1234
-    PORT: 5432
-    DB_TYPE: postgres
+      HOST: ge-postgres.dev.svc.cluster.local
+      USER: postgres
+      NAME: gitea
+      PASSWD: admin1234
+      PORT: 5432
+      DB_TYPE: postgres
     server:
       SSH_PORT: 22 # rootful image
       SSH_LISTEN_PORT: 2222 # rootless image
