@@ -526,7 +526,7 @@ primary:
     runAsGroup: 1001
     # runAsNonRoot: true
     # privileged: false
-    runAsNonRoot: false
+    runAsNonRoot: true
     privileged: false
     readOnlyRootFilesystem: false
     allowPrivilegeEscalation: false
@@ -1643,7 +1643,7 @@ volumePermissions:
     seLinuxOptions: {}
     runAsUser: 0
     runAsGroup: 0
-    runAsNonRoot: false
+    runAsNonRoot: true
     seccompProfile:
       type: RuntimeDefault
 ## @section Other Parameters
