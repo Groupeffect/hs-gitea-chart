@@ -421,10 +421,11 @@ gitea:
   config:
     APP_NAME: "Gitea: Groupeffect"
     databse:
-      HOST: "ge-postgres.dev.svc.cluster.local"
-      USER: "postgres"
+      HOST: ge-postgres.dev.svc.cluster.local
+      USER: postgres
       NAME: "gitea"
-      PASSWD: "admin1234"
+      PASSWD: admin1234
+      PORT: 5432
     #  RUN_MODE: dev
     # database:
     server:
@@ -442,7 +443,7 @@ gitea:
   #       name: gitea-app-ini-plaintext
 
   ## @param gitea.additionalConfigFromEnvs Additional configuration sources from environment variables
-  # additionalConfigFromEnvs:
+  additionalConfigFromEnvs: []
   #   - name: GITEA__DATABASE__NAME
   #     value: gitea
   #   - name: GITEA__DATABASE__HOST
