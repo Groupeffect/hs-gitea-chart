@@ -420,13 +420,13 @@ gitea:
   ## @param gitea.config.server.SSH_LISTEN_PORT SSH port for rootless Gitea image
   config:
     APP_NAME: "Gitea: Groupeffect"
-    databse:
-      # HOST: ge-postgres.dev.svc.cluster.local
-      USER: postgres
-      NAME: gitea
-      PASSWD: admin1234
-      PORT: 5432
-      DB_TYPE: postgres
+    # databse:
+    # HOST: ge-postgres.dev.svc.cluster.local
+    # USER: postgres
+    # NAME: gitea
+    # PASSWD: admin1234
+    # PORT: 5432
+    # DB_TYPE: postgres
     #  RUN_MODE: dev
     # database:
     server:
