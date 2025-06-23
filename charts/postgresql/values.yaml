@@ -525,9 +525,9 @@ primary:
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
-    # runAsNonRoot: false
+    # runAsNonRoot: true
     # privileged: false
-    runAsNonRoot: false
+    runAsNonRoot: true
     privileged: false
     readOnlyRootFilesystem: false
     allowPrivilegeEscalation: false
@@ -984,7 +984,7 @@ readReplicas:
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
-    runAsNonRoot: false
+    runAsNonRoot: true
     privileged: false
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
@@ -1354,7 +1354,7 @@ backup:
       seLinuxOptions: {}
       runAsUser: 0 # root
       runAsGroup: 0 # root
-      runAsNonRoot: false
+      runAsNonRoot: true
       privileged: false
       readOnlyRootFilesystem: true
       allowPrivilegeEscalation: false
@@ -1494,7 +1494,7 @@ passwordUpdateJob:
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
-    runAsNonRoot: false
+    runAsNonRoot: true
     privileged: false
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
@@ -1769,7 +1769,7 @@ metrics:
     seLinuxOptions: {}
     runAsUser: 0 # root
     runAsGroup: 0 # root
-    runAsNonRoot: false
+    runAsNonRoot: true
     privileged: false
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
