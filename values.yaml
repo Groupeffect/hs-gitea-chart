@@ -421,7 +421,7 @@ gitea:
   config:
     APP_NAME: "Gitea: Groupeffect"
     databse:
-      HOST: ge-postgres.dev.svc.cluster.local
+      # HOST: ge-postgres.dev.svc.cluster.local
       USER: postgres
       NAME: gitea
       PASSWD: admin1234
@@ -445,12 +445,13 @@ gitea:
 
   ## @param gitea.additionalConfigFromEnvs Additional configuration sources from environment variables
   additionalConfigFromEnvs:
-    - name: GITEA_DATABASE_NAME
-      value: gitea
-    - name: GITEA_DATABASE_HOST
-      value: ge-postgres.dev.svc.cluster.local
-    - name: GITEA_DATABASE_PASSWD
-      value: admin1234
+    []
+    # - name: GITEA_DATABASE_NAME
+    #   value: gitea
+    # - name: GITEA_DATABASE_HOST
+    #   value: ge-postgres.dev.svc.cluster.local
+    # - name: GITEA_DATABASE_PASSWD
+    #   value: admin1234
 
   ## @param gitea.podAnnotations Annotations for the Gitea pod
   podAnnotations: {}
@@ -605,7 +606,7 @@ postgresql-ha:
 ## @param postgresql.global.postgresql.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
 ## @param postgresql.primary.persistence.size PVC Storage Request for PostgreSQL volume
 postgresql:
-  enabled: false
+  enabled: true
   global:
     postgresql:
       auth:
