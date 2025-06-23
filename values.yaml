@@ -438,13 +438,13 @@ gitea:
   #       name: gitea-app-ini-plaintext
 
   ## @param gitea.additionalConfigFromEnvs Additional configuration sources from environment variables
-  additionalConfigFromEnvs:
-    - name: GITEA__DATABASE__NAME
-      value: gitea
-    - name: GITEA__DATABASE__HOST
-      value: ge-postgres.dev.svc.cluster.local
-    - name: GITEA__DATABASE__PASSWD
-      value: admin1234
+  # additionalConfigFromEnvs:
+  #   - name: GITEA__DATABASE__NAME
+  #     value: gitea
+  #   - name: GITEA__DATABASE__HOST
+  #     value: ge-postgres.dev.svc.cluster.local
+  #   - name: GITEA__DATABASE__PASSWD
+  #     value: admin1234
 
   ## @param gitea.podAnnotations Annotations for the Gitea pod
   podAnnotations: {}

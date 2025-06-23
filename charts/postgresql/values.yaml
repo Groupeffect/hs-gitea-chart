@@ -500,7 +500,7 @@ primary:
   ## @param primary.podSecurityContext.fsGroup Group ID for the pod
   ##
   podSecurityContext:
-    enabled: true
+    enabled: false
     fsGroupChangePolicy: Always
     sysctls: []
     supplementalGroups: []
@@ -528,7 +528,7 @@ primary:
     # privileged: false
     # runAsUser: root
     # runAsGroup: root
-    runAsNonRoot: false
+    runAsNonRoot: true
     privileged: false
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: true
