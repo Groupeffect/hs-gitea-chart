@@ -421,13 +421,13 @@ gitea:
   config:
     #  RUN_MODE: dev
     APP_NAME: "Gitea: Groupeffect"
-    databse:
-      HOST: ge-postgres.dev.svc.cluster.local
-      USER: postgres
-      NAME: gitea
-      PASSWD: admin1234
-      PORT: 5432
-      DB_TYPE: postgres
+    # databse:
+    #   HOST: ge-postgres.dev.svc.cluster.local
+    #   USER: postgres
+    #   NAME: gitea
+    #   PASSWD: admin1234
+    #   PORT: 5432
+    #   DB_TYPE: postgres
     server:
       SSH_PORT: 22 # rootful image
       SSH_LISTEN_PORT: 2222 # rootless image
@@ -605,13 +605,13 @@ postgresql-ha:
 ## @param postgresql.global.postgresql.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
 ## @param postgresql.primary.persistence.size PVC Storage Request for PostgreSQL volume
 postgresql:
-  enabled: false
+  enabled: true
   global:
     postgresql:
       auth:
         password: admin1234
         database: gitea
-        username: postgres
+        username: gitea
       service:
         ports:
           postgresql: 5432
